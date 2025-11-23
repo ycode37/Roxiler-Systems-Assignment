@@ -22,7 +22,12 @@ Admin can create admin and store owner accounts
 
 ## User Roles & Functionalities
 
+ 
  System Administrator
+  To access Admin account
+  email_id ->admin@abc.com
+  password ->Admin123@@
+ 
 Add stores, normal users, and admin users
 <img width="1221" height="791" alt="Screenshot 2025-11-23 at 5 19 10 PM" src="https://github.com/user-attachments/assets/f798caf2-7764-47ba-b90a-c81de040f0cb" />
 <img width="986" height="808" alt="Screenshot 2025-11-23 at 5 19 51 PM" src="https://github.com/user-attachments/assets/98f8eaf7-f51a-462b-a29e-f4da6456b96b" />
