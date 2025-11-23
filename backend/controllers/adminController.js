@@ -2,9 +2,7 @@ import User from '../models/User.js';
 import Store from '../models/Store.js';
 import Rating from '../models/Rating.js';
 
-// @desc    Get dashboard statistics
-// @route   GET /api/admin/dashboard
-// @access  Private/Admin
+
 export const getDashboardStats = async (req, res, next) => {
   try {
     const totalUsers = (await User.findAll()).length;
@@ -24,9 +22,7 @@ export const getDashboardStats = async (req, res, next) => {
   }
 };
 
-// @desc    Get all users with filters
-// @route   GET /api/admin/users
-// @access  Private/Admin
+
 export const getAllUsers = async (req, res, next) => {
   try {
     const filters = {
@@ -34,8 +30,8 @@ export const getAllUsers = async (req, res, next) => {
       email: req.query.email,
       address: req.query.address,
       role: req.query.role,
-      sortBy: req.query.sortBy || 'created_at', // Default sort by created_at
-      sortOrder: req.query.sortOrder || 'DESC', // Default descending
+      sortBy: req.query.sortBy || 'created_at', 
+      sortOrder: req.query.sortOrder || 'DESC', 
     };
 
     const users = await User.findAllWithFilters(filters);
@@ -50,9 +46,7 @@ export const getAllUsers = async (req, res, next) => {
   }
 };
 
-// @desc    Get user by ID with rating
-// @route   GET /api/admin/users/:id
-// @access  Private/Admin
+
 export const getUserById = async (req, res, next) => {
   try {
     const user = await User.findByIdWithRating(req.params.id);
@@ -73,9 +67,6 @@ export const getUserById = async (req, res, next) => {
   }
 };
 
-// @desc    Create new user (by admin)
-// @route   POST /api/admin/users
-// @access  Private/Admin
 export const createUser = async (req, res, next) => {
   try {
     const { name, email, password, address, role } = req.body;
@@ -116,17 +107,14 @@ export const createUser = async (req, res, next) => {
   }
 };
 
-// @desc    Get all stores with filters
-// @route   GET /api/admin/stores
-// @access  Private/Admin
 export const getAllStores = async (req, res, next) => {
   try {
     const filters = {
       name: req.query.name,
       email: req.query.email,
       address: req.query.address,
-      sortBy: req.query.sortBy || 'created_at', // Default sort by created_at
-      sortOrder: req.query.sortOrder || 'DESC', // Default descending
+      sortBy: req.query.sortBy || 'created_at', 
+      sortOrder: req.query.sortOrder || 'DESC', 
     };
 
     const stores = await Store.findAllWithFilters(filters);
@@ -141,12 +129,7 @@ export const getAllStores = async (req, res, next) => {
   }
 };
 
-// @desc    Create new store
-// @route   POST /api/admin/stores
-// @access  Private/Admin
-// @desc    Create new store
-// @route   POST /api/admin/stores
-// @access  Private/Admin
+
 export const createStore = async (req, res, next) => {
   try {
     const { name, email, description, address, owner_name, owner_email, temporary_password } = req.body;
@@ -196,9 +179,7 @@ export const createStore = async (req, res, next) => {
   }
 };
 
-// @desc    Get all ratings
-// @route   GET /api/admin/ratings
-// @access  Private/Admin
+
 export const getAllRatings = async (req, res, next) => {
   try {
     const ratings = await Rating.findAll();
