@@ -13,25 +13,25 @@ This project was developed as part of a Full Stack Coding Challenge .
 Users can rate stores from 1 to 5 and view ratings submitted by others.  
 
 ## Authentication & Authorization
+<img width="858" height="678" alt="Screenshot 2025-11-23 at 2 41 44 PM" src="https://github.com/user-attachments/assets/800442d1-de2e-4442-9e6e-1a8d53dbb914" />
 
 The platform uses JWT-based authentication with role-based access control.
 Single login system for Admin, Store Owner, and Normal User .
 Admin can create admin and store owner accounts
 
-Password Security
-Passwords hashed using bcrypt
-
-
 ## User Roles & Functionalities
 
  System Administrator
 - Add stores, normal users, and admin users
-- Dashboard insights:
-  - Total Users
-  - Total Stores
-  - Total Submitted Ratings
+<img width="1221" height="791" alt="Screenshot 2025-11-23 at 5 19 10 PM" src="https://github.com/user-attachments/assets/f798caf2-7764-47ba-b90a-c81de040f0cb" />
+<img width="986" height="808" alt="Screenshot 2025-11-23 at 5 19 51 PM" src="https://github.com/user-attachments/assets/98f8eaf7-f51a-462b-a29e-f4da6456b96b" />
+ Dashboard insights:
+
+<img width="1273" height="703" alt="Screenshot 2025-11-23 at 5 18 25 PM" src="https://github.com/user-attachments/assets/856f511b-8933-4733-9c91-b9ea2ac6f726" />
 - View & filter user and store lists by Name, Email, Address, Role
+<img width="1371" height="787" alt="Screenshot 2025-11-23 at 5 18 48 PM" src="https://github.com/user-attachments/assets/a18d3e3e-9835-4359-8200-5015c696e0fc" />
 - View store details including ratings
+<img width="1275" height="528" alt="Screenshot 2025-11-23 at 5 19 30 PM" src="https://github.com/user-attachments/assets/93e05a41-5d79-4e9e-9705-7802d8762397" />
 - Manage accounts & logout
 
 Normal User
