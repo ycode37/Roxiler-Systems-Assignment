@@ -1,8 +1,6 @@
 import { pool } from '../config/db.js';
 
-// @desc    Get all stores for normal users
-// @route   GET /api/user/stores
-// @access  Private/Normal User
+
 export const getAllStores = async (req, res, next) => {
   try {
     const userId = req.user.id;
@@ -39,9 +37,7 @@ export const getAllStores = async (req, res, next) => {
   }
 };
 
-// @desc    Submit or update rating for a store
-// @route   POST /api/user/stores/:storeId/rate
-// @access  Private/Normal User
+
 export const rateStore = async (req, res, next) => {
   try {
     const { storeId } = req.params;
@@ -99,9 +95,7 @@ export const rateStore = async (req, res, next) => {
   }
 };
 
-// @desc    Get user's ratings
-// @route   GET /api/user/my-ratings
-// @access  Private/Normal User
+r
 export const getMyRatings = async (req, res, next) => {
   try {
     const userId = req.user.id;
@@ -128,9 +122,7 @@ export const getMyRatings = async (req, res, next) => {
   }
 };
 
-// @desc    Delete rating
-// @route   DELETE /api/user/ratings/:ratingId
-// @access  Private/Normal User
+
 export const deleteRating = async (req, res, next) => {
   try {
     const { ratingId } = req.params;
