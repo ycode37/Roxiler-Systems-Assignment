@@ -2,9 +2,7 @@ import User from '../models/User.js';
 import { generateToken } from '../utils/jwt.js';
 import bcrypt from 'bcryptjs';
 
-// @desc    Register new user
-// @route   POST /api/auth/signup
-// @access  Public
+
 export const signup = async (req, res, next) => {
   try {
     const { name, email, password, address, role } = req.body;
@@ -46,9 +44,7 @@ export const signup = async (req, res, next) => {
   }
 };
 
-// @desc    Login user
-// @route   POST /api/auth/login
-// @access  Public
+
 export const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
@@ -110,9 +106,7 @@ export const login = async (req, res, next) => {
   }
 };
 
-// @desc    Get current logged in user
-// @route   GET /api/auth/me
-// @access  Private
+
 export const getMe = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id);
@@ -132,9 +126,7 @@ export const getMe = async (req, res, next) => {
   }
 };
 
-// @desc    Logout user
-// @route   POST /api/auth/logout
-// @access  Private
+
 export const logout = async (req, res, next) => {
   try {
     res.status(200).json({
@@ -161,9 +153,7 @@ export const getAllUsers = async (req, res, next) => {
   }
 };
 
-// @desc    Change password
-// @route   POST /api/auth/change-password
-// @access  Private
+
 export const changePassword = async (req, res, next) => {
   try {
     const { currentPassword, newPassword } = req.body;
