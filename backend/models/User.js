@@ -92,10 +92,7 @@ class User {
     const [rows] = await pool.query(query, values);
     return rows;
   }
-  // Add this method to the User class (after the findAll method)
 
-  // Get all users with filters
-  // Get all users with filters
   static async findAllWithFilters(filters = {}) {
     let query =
       'SELECT id, name, email, address, role, created_at FROM users WHERE 1=1';
