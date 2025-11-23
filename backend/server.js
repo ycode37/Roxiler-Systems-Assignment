@@ -21,7 +21,7 @@ const app = express();
 
 const API = process.env.FRONTEND_URL;
 const corsOptions = {
-origin: '*',
+origin: [`${API}`, 'http://localhost:3000'],
   credentials: true,
   optionsSuccessStatus: 200,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
